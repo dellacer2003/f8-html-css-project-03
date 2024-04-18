@@ -2,11 +2,143 @@
   box-sizing: border-box;
 }
 
+:root {
+  --brand-color: #2e80ce;
+  --background-01: #10375c;
+
+  --content-01: #fff;
+  --desc-on-color-01: rgb(201, 210, 218);
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
+  color: var(--content-01);
   font-size: 1.6rem;
   font-family: "Sora", sans-serif;
+}
+
+/*========== Common ========== */
+.container {
+  width: 117rem;
+  max-width: calc(100% - 4.8rem);
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Button */
+.btn--primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-color);
+  line-height: 1.75;
+}
+
+.btn--primary:hover {
+  opacity: 0.9;
+}
+
+.btn--ghost {
+  color: var(--desc-on-color-01);
+  font-weight: 300;
+  line-height: 1.75;
+  background: none;
+}
+
+.btn--ghost:hover {
+  color: var(--content-01);
+}
+
+.btn--sm {
+  padding: 0 2rem;
+  min-width: 10.8rem;
+  height: 4.4rem;
+  border-radius: 2.2rem;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
+}
+
+.btn--lg {
+  padding: 0 3rem;
+  min-width: 20.5rem;
+  height: 6rem;
+  border-radius: 3rem;
+  font-size: 1.8rem;
+  line-height: 1.667;
+}
+
+/*==========  Header ========== */
+.header {
+  min-height: 100vh;
+  text-shadow: 0.05rem 0rem 0rem rgb(255, 255, 255);
+  background-color: var(--background-01);
+}
+
+.nav {
+  display: flex;
+  padding-top: 3rem;
+}
+
+/* Brand */
+.brand__container {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand__name {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.5rem;
+  line-height: 0.7778;
+}
+
+.brand__name--top {
+  font-size: 1.8rem;
+}
+
+.brand__name--bottom {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: 31.8rem;
+}
+
+.menu__container {
+  display: flex;
+  gap: 4.2rem;
+  color: var(--desc-on-color-01);
+}
+
+.menu__container li {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+.menu__container li:hover {
+  text-shadow: 0.05rem 0rem 0rem rgb(255, 255, 255);
+  color: var(--content-01);
+  list-style: disc;
+}
+
+/* Action */
+.action {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
