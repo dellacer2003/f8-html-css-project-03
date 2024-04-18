@@ -2,25 +2,30 @@
   box-sizing: border-box;
 }
 
+/* Variables */
 :root {
   --brand-color: #2e80ce;
   --background-01: #10375c;
 
   --content-01: #fff;
-  --desc-on-color-01: rgb(201, 210, 218);
+  --desc-on-color-01: #c9d2da;
 }
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
+  position: relative;
+  height: 2000px;
   color: var(--content-01);
   font-size: 1.6rem;
   font-family: "Sora", sans-serif;
 }
 
 /*========== Common ========== */
+/* Utility */
 .container {
   width: 117rem;
   max-width: calc(100% - 4.8rem);
@@ -76,20 +81,26 @@ a {
 
 /*==========  Header ========== */
 .header {
-  min-height: 100vh;
+  position: sticky;
+  top: -2rem;
   text-shadow: 0.05rem 0rem 0rem rgb(255, 255, 255);
   background-color: var(--background-01);
+  z-index: 10;
 }
 
 .nav {
   display: flex;
-  padding-top: 3rem;
+  padding: 3rem 0 1rem;
 }
 
 /* Brand */
+.brand,
 .brand__container {
   display: flex;
   align-items: center;
+}
+
+.brand__container {
   gap: 0.6rem;
 }
 
@@ -139,6 +150,79 @@ a {
 /* Action */
 .action {
   display: flex;
-  align-items: center;
   margin-left: auto;
+}
+
+/*==========  Hero ========== */
+.hero {
+  padding: 6.6rem 0 11rem;
+  background: var(--background-01);
+}
+
+.hero__layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Content */
+.hero__content {
+  width: 44%;
+}
+
+.hero__heading {
+  font-size: 7rem;
+  font-weight: 600;
+  line-height: 1.14286;
+  letter-spacing: -0.14rem;
+}
+
+.hero__desc {
+  color: var(--desc-on-color-01);
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.6667;
+  margin-top: 2.2rem;
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  gap: 3.8rem;
+  margin-top: 3.8rem;
+}
+
+.hero__cta__call {
+  font-size: 1.8rem;
+  line-height: 1.6667;
+  cursor: pointer;
+}
+
+.hero__cta__call:hover {
+  text-decoration: underline;
+}
+
+/* illustration */
+.hero__illustration {
+  position: relative;
+  width: 46%;
+}
+
+.hero__img img {
+  position: relative;
+  width: 33rem;
+  height: 54rem;
+  border-radius: 0.6rem;
+  object-fit: cover;
+  z-index: 2;
+}
+
+.hero__img img:last-child {
+  position: absolute;
+  top: 6.5rem;
+  right: 0;
+  width: 21rem;
+  height: 41rem;
+  border-radius: 0rem 0.6rem 0.6rem 0rem;
+  z-index: 1;
 }
