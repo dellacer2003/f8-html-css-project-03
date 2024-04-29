@@ -8,6 +8,8 @@
   --background-01: #10375c;
   --background-02: #f6fbff;
 
+  --card-background-01: #eaf6ff;
+
   --content-01: #fff;
   --content-02: #10375c;
 
@@ -159,6 +161,7 @@ a {
   font-weight: 300;
   line-height: 1.75;
   color: var(--desc-on-color-01);
+  cursor: pointer;
 }
 
 .menu__item:hover,
@@ -166,6 +169,10 @@ a {
   text-shadow: 0.05rem 0rem 0rem rgb(255, 255, 255);
   color: var(--content-01);
   list-style: disc;
+}
+
+.menu__item a {
+  padding: 1rem 0;
 }
 
 /* Action */
@@ -336,7 +343,7 @@ a {
 
 /*==========  About ========== */
 .about {
-  padding: 9rem 0;
+  padding: 9rem 0 10rem;
   margin-top: 11rem;
   background-color: var(--background-02);
 }
@@ -402,4 +409,166 @@ a {
   color: var(--brand-color);
   text-decoration: none;
   font-weight: 400;
+}
+
+/*==========  About ========== */
+.description {
+  margin: 17rem 0 0;
+}
+
+.description__layout {
+  display: flex;
+}
+
+.description__illustration {
+  position: relative;
+}
+
+.description img {
+  width: 51.2rem;
+  height: 37rem;
+  object-fit: cover;
+  border-radius: 0.6rem;
+  box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.07);
+}
+
+.description img:last-child {
+  position: absolute;
+  top: 12.1rem;
+  left: 23.8rem;
+  width: 33.2rem;
+}
+
+.description__content {
+  margin-top: 8.2rem;
+  margin-left: 18.8rem;
+}
+
+.description__heading {
+  color: var(--content-02);
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+
+.description__desc {
+  margin-top: 1.8rem;
+  line-height: 1.67;
+  font-size: 1.8rem;
+}
+
+.description a {
+  margin-top: 3.8rem;
+}
+
+/*==========  Doctors ========== */
+.doctors {
+  margin: 17.8rem 0 0;
+  padding-top: 7.5rem;
+}
+
+.doctors__heading {
+  color: var(--background-01);
+  text-align: center;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+
+.doctors a {
+  margin: 3.8rem auto 0;
+}
+
+.doctors__dentists-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  margin-top: 7rem;
+}
+
+.dentist-card {
+  transition: ease-in-out 150ms;
+  cursor: pointer;
+}
+
+.dentist-card:hover {
+  transform: scale(1.1);
+}
+
+.dentist-card__img-frame {
+  height: 31.8rem;
+  border-radius: 0.6rem;
+  background-color: var(--card-background-01);
+  overflow: hidden;
+}
+
+.dentist-card__img {
+  width: 200%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 10%;
+  transform: translateX(-27%);
+}
+
+.dentist-card:nth-child(2) .dentist-card__img {
+  width: 230%;
+  transform: translateX(-29%) translateY(7%);
+}
+
+.dentist-card:nth-child(3) .dentist-card__img {
+  width: 250%;
+  transform: translateX(-32%) translateY(3%);
+}
+
+.dentist-card:last-child .dentist-card__img {
+  width: 200%;
+  transform: translateX(-18%) translateY(9%);
+}
+
+.dentist-card__name {
+  margin-top: 1.2rem;
+  color: var(--background-01);
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.dentist-card__address {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.85;
+}
+
+.pagination {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  justify-content: center;
+  margin: 3.8rem auto 0;
+  color: var(--desc);
+}
+
+.pagination__button {
+  padding: 1rem 1.55rem;
+  border: 1px solid var(--desc);
+  border-radius: 50%;
+  transition: ease-in-out 150ms;
+  cursor: pointer;
+}
+
+.pagination__button:hover {
+  color: var(--content-01);
+  border: 1px solid var(--brand-color);
+  background-color: var(--brand-color);
+}
+
+.pagination__item {
+  transform: translateX(-20%);
+}
+
+.pagination__next {
+  transform: rotate(180deg);
 }
