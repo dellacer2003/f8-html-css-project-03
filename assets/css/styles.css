@@ -39,6 +39,7 @@ body {
   width: 117rem;
   max-width: calc(100% - 4.8rem);
   margin: 0 auto;
+  height: 100%;
 }
 
 a {
@@ -571,4 +572,46 @@ a {
 
 .pagination__next {
   transform: rotate(180deg);
+}
+
+/*==========  Mobile app ========== */
+.mobile {
+  margin-top: 26.5rem;
+}
+
+.mobile__layout {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  border-radius: 0.4rem;
+  padding: 7.6rem 7rem;
+  background-color: var(--brand-color);
+}
+
+.mobile__img {
+  position: absolute;
+  bottom: 0;
+}
+
+.mobile__heading {
+  width: 48.9rem;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+}
+
+.mobile__desc {
+  width: 58.6rem;
+  margin-top: 1.8rem;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.67;
+}
+
+.mobile__cta {
+  display: flex;
+  gap: 2.8rem;
+  margin-top: 3.8rem;
 }
