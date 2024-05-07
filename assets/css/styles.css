@@ -881,10 +881,6 @@ a {
 
 .footer__input::placeholder {
   color: var(--place-holder);
-  font-family: "Sora", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 185.714%;
 }
 
 .footer .divider {
